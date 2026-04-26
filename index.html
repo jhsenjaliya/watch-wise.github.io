@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WatchWise is a privacy-first browser extension that helps families detect and avoid mature scenes while kids watch online video."
+    />
+    <title>WatchWise | Safer Streaming for Families</title>
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23101820"/><path d="M32 12 48 18v13c0 11-6 18-16 22-10-4-16-11-16-22V18l16-6Z" fill="%230f8f7b"/><path d="m25 32 5 5 10-12" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="WatchWise home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+        </span>
+        <span>WatchWise</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#controls">Controls</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#waitlist">Beta</a>
+      </nav>
+      <a class="nav-cta" href="#waitlist">Get WatchWise</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Browser extension for safer family streaming</p>
+          <h1 id="hero-title">Safer streaming for families, powered by local AI.</h1>
+          <p class="hero-lede">
+            WatchWise helps parents automatically detect and avoid mature scenes while kids watch online video.
+          </p>
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="button button-primary" href="#waitlist">Get WatchWise</a>
+            <a class="button button-secondary" href="#how-it-works">See how it works</a>
+          </div>
+          <div class="trust-row" aria-label="WatchWise trust highlights">
+            <span>Local-first analysis</span>
+            <span>PIN-protected controls</span>
+            <span>Parent-controlled rules</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="WatchWise browser video safety interface mockup">
+          <div class="browser-frame">
+            <div class="browser-top">
+              <div class="window-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="address-bar">streaming.site/family-movie</div>
+              <div class="extension-pill">WatchWise active</div>
+            </div>
+
+            <div class="video-stage">
+              <div class="video-scene" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="ridge ridge-one"></div>
+                <div class="ridge ridge-two"></div>
+                <div class="play-button"></div>
+              </div>
+
+              <aside class="safety-panel">
+                <div class="panel-head">
+                  <div>
+                    <p>Scene check</p>
+                    <strong>Low risk now</strong>
+                  </div>
+                  <span class="status-dot"></span>
+                </div>
+                <div class="score-meter" aria-label="Current scene risk score">
+                  <span style="width: 23%"></span>
+                </div>
+                <div class="category-stack">
+                  <span class="chip chip-warn">Violence ahead</span>
+                  <span class="chip">Language muted</span>
+                  <span class="chip chip-neutral">Scary content</span>
+                  <span class="chip chip-clear">Nudity clear</span>
+                </div>
+                <div class="model-row">
+                  <span>Local AI</span>
+                  <strong>Loaded</strong>
+                </div>
+              </aside>
+            </div>
+
+            <div class="timeline-wrap">
+              <div class="timeline-meta">
+                <span>00:18:42</span>
+                <span>WatchWise safety timeline</span>
+              </div>
+              <div class="timeline" aria-label="Video timeline with sensitive segments highlighted">
+                <span class="safe" style="left: 0%; width: 21%"></span>
+                <span class="risk language" style="left: 24%; width: 8%" aria-label="Language segment"></span>
+                <span class="safe" style="left: 34%; width: 18%"></span>
+                <span class="risk violence" style="left: 55%; width: 12%" aria-label="Violence segment"></span>
+                <span class="safe" style="left: 70%; width: 14%"></span>
+                <span class="risk scary" style="left: 87%; width: 7%" aria-label="Scary content segment"></span>
+                <span class="playhead" style="left: 41%"></span>
+              </div>
+              <div class="timeline-legend">
+                <span><i class="legend-safe"></i> Clear</span>
+                <span><i class="legend-language"></i> Language</span>
+                <span><i class="legend-violence"></i> Violence</span>
+                <span><i class="legend-scary"></i> Scary</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="problem split-section" aria-labelledby="problem-title">
+        <div class="section-kicker">The everyday gap</div>
+        <div class="split-heading reveal">
+          <h2 id="problem-title">Age ratings are broad. Individual scenes are not.</h2>
+        </div>
+        <div class="split-copy reveal">
+          <p>
+            Parents cannot preview every episode, clip, trailer, or recommended video before a child presses play.
+            WatchWise adds a calm safety layer during playback, helping reduce exposure to specific moments that
+            may be too intense, mature, or distracting for your family.
+          </p>
+          <p>
+            It is not a spy tool or a screen-time monitor. It is designed around transparent content protection for
+            video, with settings parents can see, tune, and protect.
+          </p>
+        </div>
+      </section>
+
+      <section class="how section-shell" id="how-it-works" aria-labelledby="how-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Near-live protection without turning family viewing into a project.</h2>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-step reveal">
+            <span class="step-number">01</span>
+            <div class="flow-icon sample-icon" aria-hidden="true"></div>
+            <h3>Samples the scene</h3>
+            <p>WatchWise checks selected frames and available subtitles while video is playing.</p>
+          </article>
+          <article class="flow-step reveal">
+            <span class="step-number">02</span>
+            <div class="flow-icon classify-icon" aria-hidden="true"></div>
+            <h3>Classifies sensitive signals</h3>
+            <p>Local AI and trusted segment data score categories like violence, language, nudity, and scary content.</p>
+          </article>
+          <article class="flow-step reveal">
+            <span class="step-number">03</span>
+            <div class="flow-icon action-icon" aria-hidden="true"></div>
+            <h3>Acts by parent rules</h3>
+            <p>The extension can skip, mute, warn, or allow based on age profile and category settings.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="categories section-shell" aria-labelledby="categories-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Protection categories</p>
+          <h2 id="categories-title">Tune the content safety layer around your family.</h2>
+        </div>
+        <div class="category-grid">
+          <article class="category-card reveal">
+            <span class="category-icon icon-privacy" aria-hidden="true"></span>
+            <h3>Nudity</h3>
+            <p>Helps identify scenes with exposed bodies or adult visual content.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-boundary" aria-hidden="true"></span>
+            <h3>Sexual Content</h3>
+            <p>Flags intimate or sexually suggestive moments parents may want to avoid.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-shield" aria-hidden="true"></span>
+            <h3>Violence</h3>
+            <p>Detects fighting, weapons, injuries, and intense action sequences.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-caption" aria-hidden="true"></span>
+            <h3>Language</h3>
+            <p>Uses subtitle and audio-adjacent signals to help mute strong language.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-leaf" aria-hidden="true"></span>
+            <h3>Drugs / Alcohol / Tobacco</h3>
+            <p>Recognizes substance-related scenes and recurring visual cues.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-moon" aria-hidden="true"></span>
+            <h3>Scary Content</h3>
+            <p>Helps avoid jump scares, frightening imagery, and high-intensity scenes.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-smile" aria-hidden="true"></span>
+            <h3>Crude Humor</h3>
+            <p>Marks rough jokes, gross-out moments, or content that needs context.</p>
+          </article>
+          <article class="category-card reveal">
+            <span class="category-icon icon-cloud" aria-hidden="true"></span>
+            <h3>Dark Themes</h3>
+            <p>Surfaces mature themes that may be better watched with an adult nearby.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="controls section-shell" id="controls" aria-labelledby="controls-title">
+        <div class="control-copy reveal">
+          <p class="eyebrow">Parent controls</p>
+          <h2 id="controls-title">Rules that are simple to understand and hard for kids to bypass.</h2>
+          <p>
+            Choose an age profile, set category actions, and protect changes behind a PIN. WatchWise keeps the
+            experience visible to parents and predictable for the family.
+          </p>
+        </div>
+
+        <div class="control-board reveal" aria-label="WatchWise parent controls mockup">
+          <div class="control-header">
+            <div>
+              <span>Family profile</span>
+              <strong>Kids mode</strong>
+            </div>
+            <div class="pin-lock" aria-label="PIN protected">
+              <span></span>
+              PIN
+            </div>
+          </div>
+
+          <div class="profile-tabs" role="list" aria-label="Age profiles">
+            <button class="active" type="button">Kids</button>
+            <button type="button">Teens</button>
+            <button type="button">Grown-Up</button>
+          </div>
+
+          <div class="settings-list">
+            <div class="setting-row">
+              <div>
+                <strong>Violence</strong>
+                <span>Skip high-intensity scenes</span>
+              </div>
+              <span class="toggle on" aria-label="Violence protection on"></span>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>Language</strong>
+                <span>Mute strong words</span>
+              </div>
+              <span class="toggle on" aria-label="Language protection on"></span>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>Scary Content</strong>
+                <span>Warn before intense moments</span>
+              </div>
+              <span class="toggle on" aria-label="Scary content protection on"></span>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>Dark Themes</strong>
+                <span>Allow with note</span>
+              </div>
+              <span class="toggle" aria-label="Dark themes protection off"></span>
+            </div>
+          </div>
+
+          <div class="action-strip" aria-label="Available actions">
+            <span>Skip</span>
+            <span>Mute</span>
+            <span>Warn</span>
+            <span>Allow</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+        <div class="privacy-inner section-shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Privacy and trust</p>
+            <h2 id="privacy-title">Built as a family safety layer, not a surveillance system.</h2>
+            <p>
+              WatchWise is designed to analyze video locally in the browser when possible, so sensitive frames do not
+              need to be uploaded just to understand what is on screen.
+            </p>
+          </div>
+          <div class="trust-grid">
+            <article class="trust-card reveal">
+              <span class="trust-icon shield-visual" aria-hidden="true"></span>
+              <h3>Built for families</h3>
+              <p>Clear settings, calm warnings, and practical defaults for shared devices.</p>
+            </article>
+            <article class="trust-card reveal">
+              <span class="trust-icon chip-visual" aria-hidden="true"></span>
+              <h3>Local-first AI</h3>
+              <p>Frame analysis is designed to happen on device whenever the browser can support it.</p>
+            </article>
+            <article class="trust-card reveal">
+              <span class="trust-icon lock-visual" aria-hidden="true"></span>
+              <h3>Transparent controls</h3>
+              <p>Parents can see active models, checked categories, segment data status, and rule actions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="use-cases section-shell" aria-labelledby="use-cases-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Useful when life is busy</p>
+          <h2 id="use-cases-title">A steadier way to handle online video.</h2>
+        </div>
+        <div class="use-grid">
+          <article class="use-card reveal">
+            <h3>Let kids watch with fewer surprises</h3>
+            <p>Add a safety pass for scenes that may not match a child’s age or sensitivity.</p>
+          </article>
+          <article class="use-card reveal">
+            <h3>Reduce manual previewing</h3>
+            <p>Spend less time checking every moment before a family movie or recommended clip.</p>
+          </article>
+          <article class="use-card reveal">
+            <h3>Customize rules by age</h3>
+            <p>Use stricter choices for younger children and more flexible warnings for teens.</p>
+          </article>
+          <article class="use-card reveal">
+            <h3>Fill community data gaps</h3>
+            <p>Local AI helps when trusted skip segments are not yet available for a video.</p>
+          </article>
+          <article class="use-card reveal">
+            <h3>Make shared viewing smoother</h3>
+            <p>Agree on settings once, then let the extension handle the awkward moments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="technical section-shell" aria-labelledby="technical-title">
+        <div class="tech-panel reveal">
+          <div class="tech-copy">
+            <p class="eyebrow">Technical credibility</p>
+            <h2 id="technical-title">Designed for browser extension performance.</h2>
+            <p>
+              WatchWise combines visual scene models, subtitle/text signals when available, trusted segment timing,
+              and scene-boundary logic so actions feel timely without being abrupt.
+            </p>
+          </div>
+          <div class="tech-stack" aria-label="WatchWise technical signals">
+            <div class="tech-row">
+              <span>Visual AI models</span>
+              <strong>Scene + object signals</strong>
+            </div>
+            <div class="tech-row">
+              <span>Subtitle signals</span>
+              <strong>Language context</strong>
+            </div>
+            <div class="tech-row">
+              <span>Segment data</span>
+              <strong>Trusted timing</strong>
+            </div>
+            <div class="tech-row">
+              <span>Playback actions</span>
+              <strong>Skip, mute, warn</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section-shell" id="waitlist" aria-labelledby="final-title">
+        <div class="cta-copy reveal">
+          <p class="eyebrow">Get WatchWise</p>
+          <h2 id="final-title">Give your family a smarter safety layer for online video.</h2>
+          <p>
+            Join the beta list for early access updates. WatchWise is built to support parents, not replace
+            supervision or family conversation.
+          </p>
+          <div class="cta-buttons">
+            <a class="button button-primary" href="#waitlist" data-focus-waitlist>Install WatchWise</a>
+            <a class="button button-secondary" href="#waitlist" data-focus-waitlist>Join the beta</a>
+          </div>
+        </div>
+        <form class="waitlist-form reveal" novalidate>
+          <label for="email">Email address</label>
+          <div class="form-row">
+            <input id="email" name="email" type="email" placeholder="parent@example.com" autocomplete="email" required />
+            <button class="button button-primary" type="submit">Request access</button>
+          </div>
+          <p class="form-note" id="form-note">No spam. Just beta access and product updates.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="WatchWise home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+        </span>
+        <span>WatchWise</span>
+      </a>
+      <p>Content safety for family video playback. Detection can help parents, but it is not perfect.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
