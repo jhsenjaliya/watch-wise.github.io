@@ -1,0 +1,104 @@
+# Project Memory: WatchWise Marketing Site
+
+## Current State
+
+- Workspace: `/Users/jsenjaliya/Documents/New project`
+- Git branch: `main`
+- Existing committed site commit: `fab6c76` (`Create WatchWise marketing site`)
+- Commit author used: `Jay Sen <jaysen@apache.org>`
+- Current product: WatchWise, a browser extension for safer family video streaming.
+- Site implementation files: `index.html`, `styles.css`, `script.js`
+- Existing untracked setup files/directories were intentionally left untouched: `.agents/`, `.aidesigner/`, `.codex/`, `.gitignore`
+
+## Product Positioning
+
+- WatchWise is a parental-control and family-safety browser extension.
+- Core value: helps parents reduce children’s exposure to unwanted video content while watching streaming/video websites.
+- It is a content-safety layer for video playback, not a spy tool and not a generic screen-time monitor.
+- Tone: trustworthy, modern, parent-friendly, privacy-conscious, technically credible.
+- Copy must avoid absolute guarantees such as “100% safe” or “perfect detection.”
+- Preferred language: “helps reduce exposure,” “adds a safety layer,” “near-live analysis,” “local-first,” and “parent-controlled.”
+
+## Audience
+
+- Primary: parents and guardians who want safer streaming for kids and teens without manually previewing every video.
+- Secondary: families, homeschoolers, and caregivers.
+
+## Capabilities To Communicate
+
+- Near-live video scene analysis by sampling current playback frames.
+- On-device/local-first AI using scene classifiers and object detection when possible.
+- Multi-category detection: nudity, sexual content, violence, profanity/strong language, drugs/alcohol/tobacco, scary content, crude humor, and dark/mature themes.
+- Age profiles: Kids, Teens, Grown-Up.
+- Smart actions: skip, mute, warn, or allow based on parent settings.
+- PIN-protected parent controls.
+- Trusted server/community segment data can act ahead of time when available.
+- Local AI fills gaps when trusted segment data is missing.
+- Diagnostic transparency: parents can see models loaded, checked categories, and active system state.
+
+## Implementation Decisions
+
+- Build format: dependency-free static site.
+- Files created: `index.html`, `styles.css`, `script.js`.
+- No React, Vite, Astro, package manager, or build step.
+- External web fonts are allowed with local fallback stacks.
+- Visuals are custom HTML/CSS mockups, not explicit imagery or stock photos.
+- CTA behavior is front-end only:
+  - `Get WatchWise` and `Install WatchWise` scroll to the waitlist/final CTA.
+  - `See how it works` scrolls to the how-it-works section.
+  - `Join the beta` focuses the waitlist email field.
+  - Waitlist form validates email client-side and shows success/error state.
+  - No backend submission, analytics, or production form endpoint exists yet.
+
+## Design Direction
+
+- Premium SaaS/product feel, not childish.
+- Warm, calm, credible family-tech aesthetic.
+- Palette: deep charcoal/navy foundation, teal/green safety accents, light surfaces, restrained warm accent.
+- Avoid red-heavy fear-based design.
+- Avoid explicit or graphic imagery.
+- First viewport must immediately communicate: “browser extension for safer family video streaming.”
+- Hero includes:
+  - Headline: “Safer streaming for families, powered by local AI.”
+  - Subheadline: “WatchWise helps parents automatically detect and avoid mature scenes while kids watch online video.”
+  - CTAs: “Get WatchWise” and “See how it works.”
+  - Browser/video-player mockup with safety timeline, risky segments, WatchWise panel, and category chips.
+
+## Site Sections
+
+- Hero
+- Problem section
+- How it works
+- Protection categories
+- Parent controls
+- Privacy/trust
+- Use cases
+- Technical credibility
+- Final CTA and waitlist
+
+## Verification Performed
+
+- Served locally with `python3 -m http.server 4173`.
+- Verified with Playwright at desktop, tablet, and mobile viewport widths:
+  - `1440x960`
+  - `768x900`
+  - `390x844`
+- Confirmed:
+  - Page title is correct.
+  - Hero headline is correct.
+  - Waitlist form exists.
+  - Hero mockup exists.
+  - No horizontal overflow at checked widths.
+  - Console had no errors/warnings after inline favicon was added.
+  - Waitlist invalid email state works.
+  - Waitlist valid email success state works.
+- Ran `node --check script.js`; passed.
+
+## Git Notes
+
+- Commit already created for the site:
+  - SHA: `fab6c76db63cf530cdaa5a110d0ca8d4c38c6d53`
+  - Message: `Create WatchWise marketing site`
+  - Author: `Jay Sen <jaysen@apache.org>`
+  - Committer: `Jay Sen <jaysen@apache.org>`
+- This memory file was created after that commit and is not included in `fab6c76`.
